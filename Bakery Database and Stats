@@ -1,0 +1,36 @@
+-- Create cupcake product database for bakery
+
+CREATE TABLE Cupcakery 
+(id INTEGER PRIMARY KEY, Item TEXT, Stock INTEGER, Sold INTEGER, Minutes INTEGER, Ingredients_needed INTEGER, Price INTEGER);
+
+
+INSERT INTO Cupcakery VALUES (1, "Marshmellow Yellow Cupcake", 5, 3, 15, 5, 4.50);
+INSERT INTO Cupcakery VALUES (2, "Plain Jane Vanilla Cupcake", 10, 2, 10, 4, 3.75);
+INSERT INTO Cupcakery VALUES (3, "Galaxy Rainbow Cupcake", 15, 8, 25, 10, 5.00);
+INSERT INTO Cupcakery VALUES (4, "Strawberry Daze Cupcake", 25, 15, 30, 8, 5.00);
+INSERT INTO Cupcakery VALUES (5, "Peaches and Cream Cupcake", 13, 2, 15, 11, 4.75);
+INSERT INTO Cupcakery VALUES (6, "Double Chocolate Cupcake", 25, 7, 8, 7, 3.75);
+INSERT INTO Cupcakery VALUES (7, "Blueberry Haven Cupcake", 30, 18, 15, 13, 4.50);
+INSERT INTO Cupcakery VALUES (8, "Dark Choco Choco Chip Cupcake", 20, 2, 12, 12, 3.75);
+INSERT INTO Cupcakery VALUES (9, "Blazing Banana Cupcake", 15, 2, 18, 14, 4.00);
+INSERT INTO Cupcakery VALUES (10, "Swirl Cupcake", 12, 3, 10, 15, 3.00);
+INSERT INTO Cupcakery VALUES (11, "Matcha me Happy Cupcake", 23, 2, 18, 13, 2.75);
+INSERT INTO Cupcakery VALUES (12, "Tomato Basil Cupcake", 10, 1, 15, 11, 3.50);
+INSERT INTO Cupcakery VALUES (13, "The Kitchen Sink Cupcake", 13, 2, 12, 20, 5.00);
+INSERT INTO Cupcakery VALUES (14, "Time Warp Cupcake", 10, 1, 10, 9, 2.75);
+INSERT INTO Cupcakery VALUES (15, "Glazed Yam Cupcake", 12, 3, 12, 9, 3.50);
+
+-- Display the database ordered by price
+SELECT * FROM Cupcakery 
+ORDER BY Price desc;
+
+-- What cupcakes are most cost effective to bake based on sales vs minutes to prep?
+SELECT * FROM Cupcakery 
+WHERE Sold > 3 
+ORDER BY minutes asc;
+
+-- Of the most popular cupcakes, which are bringing in more revenue per item sold?
+SELECT * FROM Cupcakery 
+WHERE Sold > 3 
+ORDER BY Price desc;
+

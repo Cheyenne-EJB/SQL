@@ -1,0 +1,301 @@
+CREATE TABLE ACOTAR_Characters (id INTEGER PRIMARY KEY, name TEXT, race TEXT);
+
+INSERT INTO ACOTAR_Characters VALUES( 1, "Amarantha", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(2, "Amren", "Hybrid");
+INSERT INTO ACOTAR_Characters VALUES(3, "Andras", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(4, "Azriel", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(5, "Bone Carver", "Monster");
+INSERT INTO ACOTAR_Characters VALUES(6, "Cassian", "Illyrian");
+INSERT INTO ACOTAR_Characters VALUES(7, "Cresseida", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(8, "Elain", "Made HF");
+INSERT INTO ACOTAR_Characters VALUES(9, "Eris", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(10, "Feyre", "Made HF");
+INSERT INTO ACOTAR_Characters VALUES(11, "Gwyneth", "Lesser Fae");
+INSERT INTO ACOTAR_Characters VALUES(12, "Helion", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(13, "Ianthe", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(14, "Jurian", "Human");
+INSERT INTO ACOTAR_Characters VALUES(15, "Kallias", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(16, "King of Hybern", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(17, "Lucien", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(18, "Merrill", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(19, "Middengard Wyrm", "Monster");
+INSERT INTO ACOTAR_Characters VALUES(20, "Morrigan", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(21, "Nesta", "Made HF");
+INSERT INTO ACOTAR_Characters VALUES(22, "Rhysand", "Illyrian");
+INSERT INTO ACOTAR_Characters VALUES(23, "Suriel", "Lesser Fae");
+INSERT INTO ACOTAR_Characters VALUES(24, "Tamlin", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(25, "Tarquin", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(26, "Thesan", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(27, "Varian", "High Fae");
+INSERT INTO ACOTAR_Characters VALUES(28, "Viviane", "High Fae");
+
+
+
+
+
+CREATE TABLE ACOTAR_Books (id INTEGER PRIMARY KEY AUTOINCREMENT, character_id INTEGER, book TEXT);
+
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(1, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(2, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(2, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(2, "ACOFAS");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(2, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(2, "HOSAB");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(3, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(4, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(4, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(4, "ACOFAS");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(4, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(4, "HOSAB");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(5, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(5, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(6, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(6, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(6, "ACOFAS");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(6, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(6, "HOSAB");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(7, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(7, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(8, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(8, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(8, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(8, "ACOFAS");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(8, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(9, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(9, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(9, "ACOFAS");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(9, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(10, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(10, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(10, "ACOFAS");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(10, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(12, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(12, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(12, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(13, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(13, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(14, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(14, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(14, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(14, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(15, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(15, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(15, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(16, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(16, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(17, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(17, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(17, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(17, "ACOFAS");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(17, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(18, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(19, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(20, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(20, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(20, "ACOFAS");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(20, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(21, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(21, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(21, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(21, "ACOFAS");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(21, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(21, "HOSAB");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(22, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(22, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(22, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(22, "ACOFAS");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(22, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(22, "HOSAB");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(23, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(23, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(23, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(24, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(24, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(24, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(24, "ACOFAS");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(24, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(25, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(25, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(25, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(26, "ACOTAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(26, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(27, "ACOMAF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(27, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(27, "ACOFAS");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(27, "ACOSF");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(28, "ACOWAR");
+INSERT INTO ACOTAR_Books (character_id, book) VALUES(28, "ACOSF");
+
+
+
+
+CREATE TABLE Mates (id INTEGER PRIMARY KEY AUTOINCREMENT, mate1_id INTEGER, mate2_id INTEGER);
+
+INSERT INTO Mates (mate1_id, mate2_id) VALUES(10, 22);
+INSERT INTO Mates (mate1_id, mate2_id) VALUES(6, 21);
+INSERT INTO Mates (mate1_id, mate2_id) VALUES(8, 17);
+INSERT INTO Mates (mate1_id, mate2_id) VALUES(15, 28);
+
+
+
+
+CREATE TABLE Character_Abilities (id INTEGER PRIMARY KEY AUTOINCREMENT, character_id INTEGER, power TEXT);
+
+INSERT INTO Character_Abilities (character_id, power) VALUES(1, "Magic");
+INSERT INTO Character_Abilities (character_id, power) VALUES(1, "Potions");
+INSERT INTO Character_Abilities (character_id, power) VALUES(1, "Curses");
+INSERT INTO Character_Abilities (character_id, power) VALUES(1, "Stolen powers");
+INSERT INTO Character_Abilities (character_id, power) VALUES(2, "Angel of Death");
+INSERT INTO Character_Abilities (character_id, power) VALUES(3, "Shapeshifting");
+INSERT INTO Character_Abilities (character_id, power) VALUES(4, "Shadowsinger");
+INSERT INTO Character_Abilities (character_id, power) VALUES(4, "Flight");
+INSERT INTO Character_Abilities (character_id, power) VALUES(4, "Siphon");
+INSERT INTO Character_Abilities (character_id, power) VALUES(4, "Teleporting");
+INSERT INTO Character_Abilities (character_id, power) VALUES(5, "Divination");
+INSERT INTO Character_Abilities (character_id, power) VALUES(5, "Necromancy");
+INSERT INTO Character_Abilities (character_id, power) VALUES(5, "Appearance Glamour");
+INSERT INTO Character_Abilities (character_id, power) VALUES(5, "Death");
+INSERT INTO Character_Abilities (character_id, power) VALUES(6, "Flight");
+INSERT INTO Character_Abilities (character_id, power) VALUES(6, "Siphon Shield");
+INSERT INTO Character_Abilities (character_id, power) VALUES(6, "Illyrian Magic");
+INSERT INTO Character_Abilities (character_id, power) VALUES(7, "Glamouring");
+INSERT INTO Character_Abilities (character_id, power) VALUES(8, "Seer");
+INSERT INTO Character_Abilities (character_id, power) VALUES(9, "Fire");
+INSERT INTO Character_Abilities (character_id, power) VALUES(9, "Winnowing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Darkness Manipulation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Ice Manipulation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Water Manipulation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Air Manipulation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Fire Manipulation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Light Generation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Shapeshifting");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Flight");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Healing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Daemati");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Winnowing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Glamouring");
+INSERT INTO Character_Abilities (character_id, power) VALUES(10, "Curse-breaking");
+INSERT INTO Character_Abilities (character_id, power) VALUES(12, "Air Manipulation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(12, "Light Generation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(12, "Curse-breaking");
+INSERT INTO Character_Abilities (character_id, power) VALUES(12, "Shapeshifting");
+INSERT INTO Character_Abilities (character_id, power) VALUES(12, "Winnowing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(15, "Ice Manipulation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(15, "Winnowing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(17, "Fire Manipulation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(17, "Winnowing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(17, "Healing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(17, "Spell-cleaving");
+INSERT INTO Character_Abilities (character_id, power) VALUES(17, "Light Generation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(17, "Air Manipulation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(20, "Winnowing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(20, "Truth");
+INSERT INTO Character_Abilities (character_id, power) VALUES(20, "Healing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(21, "Pure Death");
+INSERT INTO Character_Abilities (character_id, power) VALUES(21, "Cauldron Sensing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(21, "Connection to the Mother");
+INSERT INTO Character_Abilities (character_id, power) VALUES(21, "Linked to the Dread Trove");
+INSERT INTO Character_Abilities (character_id, power) VALUES(22, "Darkness Manipulation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(22, "Winnowing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(22, "Daemati");
+INSERT INTO Character_Abilities (character_id, power) VALUES(22, "Glamouring");
+INSERT INTO Character_Abilities (character_id, power) VALUES(22, "Flight");
+INSERT INTO Character_Abilities (character_id, power) VALUES(22, "Misting");
+INSERT INTO Character_Abilities (character_id, power) VALUES(22, "Shapeshifting");
+INSERT INTO Character_Abilities (character_id, power) VALUES(23, "Knowledge");
+INSERT INTO Character_Abilities (character_id, power) VALUES(24, "Shapeshifting");
+INSERT INTO Character_Abilities (character_id, power) VALUES(24, "Winnowing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(24, "Glamouring");
+INSERT INTO Character_Abilities (character_id, power) VALUES(24, "Air Manipulation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(25, "Water Manipulation");
+INSERT INTO Character_Abilities (character_id, power) VALUES(25, "Winnowing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(26, "Healing Abilities");
+INSERT INTO Character_Abilities (character_id, power) VALUES(26, "Winnowing");
+INSERT INTO Character_Abilities (character_id, power) VALUES(28, "Ice Manipulation");
+
+
+
+
+--Selecting characters by book with their character name and race--
+
+SELECT ACOTAR_Characters.name, ACOTAR_Characters.race, ACOTAR_Books.book
+FROM ACOTAR_Books
+JOIN ACOTAR_Characters
+ON ACOTAR_Books.character_id=ACOTAR_Characters.id
+WHERE ACOTAR_Books.book = "ACOTAR";
+
+
+SELECT ACOTAR_Characters.name, ACOTAR_Characters.race, ACOTAR_Books.book
+FROM ACOTAR_Books
+JOIN ACOTAR_Characters
+ON ACOTAR_Books.character_id=ACOTAR_Characters.id
+WHERE ACOTAR_Books.book = "ACOMAF";
+
+SELECT ACOTAR_Characters.name, ACOTAR_Characters.race, ACOTAR_Books.book
+FROM ACOTAR_Books
+JOIN ACOTAR_Characters
+ON ACOTAR_Books.character_id=ACOTAR_Characters.id
+WHERE ACOTAR_Books.book = "ACOWAR";
+
+SELECT ACOTAR_Characters.name, ACOTAR_Characters.race, ACOTAR_Books.book
+FROM ACOTAR_Books
+JOIN ACOTAR_Characters
+ON ACOTAR_Books.character_id=ACOTAR_Characters.id
+WHERE ACOTAR_Books.book = "ACOFAS";
+
+SELECT ACOTAR_Characters.name, ACOTAR_Characters.race, ACOTAR_Books.book
+FROM ACOTAR_Books
+JOIN ACOTAR_Characters
+ON ACOTAR_Books.character_id=ACOTAR_Characters.id
+WHERE ACOTAR_Books.book = "ACOSF";
+
+SELECT ACOTAR_Characters.name, ACOTAR_Characters.race, ACOTAR_Books.book
+FROM ACOTAR_Books
+JOIN ACOTAR_Characters
+ON ACOTAR_Books.character_id=ACOTAR_Characters.id
+WHERE ACOTAR_Books.book = "HOSAB";
+
+
+
+--Viewing a table with character names alongside a collumn with their "mate" from the series--
+
+SELECT a.name AS "mate_1", b.name AS "mate_2"
+FROM Mates
+JOIN ACOTAR_Characters a
+ON Mates.mate1_id = a.id
+JOIN ACOTAR_Characters b
+ON Mates.mate2_id = b.id;
+
+
+
+--View only the "lesser fae" main characters from the series--
+
+SELECT ACOTAR_Characters.name, ACOTAR_Characters.race
+FROM ACOTAR_Characters 
+WHERE ACOTAR_Characters.race = "Lesser Fae"
+ORDER BY ACOTAR_Characters.id;
+
+
+--View characters with their abilities--
+
+SELECT ACOTAR_Characters.name, Character_Abilities.power
+FROM ACOTAR_Characters
+JOIN Character_Abilities
+ON Character_Abilities.character_id=ACOTAR_Characters.id;
+
+
+--View abilities and what characters have them--
+
+SELECT ACOTAR_Characters.name, Character_Abilities.power
+FROM ACOTAR_Characters
+JOIN Character_Abilities
+ON Character_Abilities.character_id=ACOTAR_Characters.id
+ORDER BY Character_Abilities.power;
+
+
+
+--Determine how many characters can "winnow" a power from the series--
+
+SELECT COUNT(Character_Abilities.power) AS Total_Winnowers
+FROM Character_Abilities
+WHERE Character_Abilities.power = "Winnowing";

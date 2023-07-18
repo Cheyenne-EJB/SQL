@@ -1,0 +1,45 @@
+# For this project, I downloaded Spotify data from Kaggle.
+# I then created a table to insert Spotify data into.
+# Additionally, I performed analytics on the data using SQL.
+
+
+--What are the top three most popular songs?--
+
+SELECT artist_name, track_name, popularity
+FROM BIT_DB.Spotifydata
+GROUP BY track_name
+ORDER BY popularity desc
+LIMIT 3;
+
+--Of these most popular songs, which have tempos over 120?--
+
+
+SELECT artist_name, track_name
+FROM BIT_DB.Spotifydata
+WHERE tempo > 120
+AND popularity = 95
+GROUP BY track_name
+LIMIT 3;
+
+
+--Order songs by popularity--
+
+SELECT artist_name, track_name, popularity
+FROM BIT_DB.Spotifydata
+ORDER BY popularity desc;
+
+--What is the average tempo from the top ten most popular songs--
+
+SELECT AVG(tempo)
+FROM BIT_DB.Spotifydata
+WHERE track_name <> 'traitor'
+AND track_name <> 'Sweater Weather'
+AND popularity > 91;
+
+
+--Which song has the highest danceability and what was its popularity rating?--
+
+SELECT artist_name, track_name, popularity
+FROM BIT_DB.Spotifydata
+ORDER BY danceability desc
+LIMIT 1;

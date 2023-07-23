@@ -1,0 +1,134 @@
+#Here I analyzed data from a company selling musical products and queried that data based on questions I created. 
+
+
+
+
+--List all tracks with the playlists they're in.--
+
+SELECT t.Name AS "Track", p.Name AS "Playlist", p.PlaylistID
+FROM chinook.tracks t
+
+JOIN chinook.playlist_track pt
+    ON t.TrackID = pt.TrackID
+JOIN chinook.playlists p
+    ON pt.PlaylistID = p.PlaylistID
+
+ORDER BY t.Name asc;
+
+
+--How many times does a song appear throughout all playlists?--
+
+SELECT t.Name AS "Track", COUNT(pt.TrackID) AS "Song_Appearances"
+FROM chinook.tracks t
+
+JOIN chinook.playlist_track pt
+    ON t.TrackID = pt.TrackID
+JOIN chinook.playlists p
+    ON pt.PlaylistID = p.PlaylistID
+
+GROUP BY pt.TrackID
+ORDER BY t.Name asc;
+
+
+--Which tracks cost the most?--
+
+SELECT t.Name, it.UnitPrice
+FROM chinook.tracks t
+
+JOIN chinook.invoice_items it
+    ON t.TrackID = it.TrackID
+
+WHERE it.UnitPrice > 0.99
+ORDER BY t.Name asc;
+
+
+--Which dates saw the most sales?--
+
+SELECT COUNT(InvoiceDate) AS number_of_sales, InvoiceDate
+FROM invoices
+
+GROUP BY InvoiceDate
+HAVING COUNT(InvoiceDate) >1
+ORDER BY InvoiceDate desc;
+
+
+--Where were the most sales placed from?--
+
+SELECT COUNT(invoiceid) as most_sales, BillingCity
+FROM invoices
+
+GROUP BY BillingCity
+ORDER BY COUNT(invoiceid) desc
+LIMIT 1;
+
+
+--Where are the most customers located?--
+
+SELECT COUNT(Country) AS customers, Country
+FROM customers
+
+GROUP BY Country
+ORDER BY COUNT(Country) desc
+LIMIT 5;
+
+
+
+--Show the invoice total, customer name, country, and sales agent name for all invoicess and customer.--
+
+
+SELECT e.FirstName AS "Agent First", e.LastName AS "Agent Last", c.FirstName AS "Customer First", c.LastName AS "Customer Last", c.Country, i.Total
+FROM chinook.employees e
+
+LEFT JOIN chinook.customers c
+    ON e.EmployeeID = c.SupportRepID
+LEFT JOIN chinook.invoices i
+    ON c.CustomerID = i.CustomerID
+    
+WHERE i.Total IS NOT NULL
+ORDER BY i.Total desc;
+
+
+--What are the total sales to date?--
+
+SELECT SUM(invoices.Total) AS "Total Sales"
+FROM chinook.invoices;
+
+
+--Which employee has made the least sales?--
+
+SELECT e.FirstName, e.LastName, COUNT(c.SupportRepID) AS "Total Sales"
+FROM chinook.employees e
+
+LEFT JOIN chinook.customers c
+    ON e.EmployeeID = c.SupportRepID
+    
+WHERE e.Title = "Sales Support Agent"
+GROUP BY e.EmployeeID
+ORDER BY COUNT(c.SupportRepID) asc;
+
+
+--Which employee has made the least amount from sales, and what total amounts have the sales agents made?--
+
+SELECT e.FirstName, e.LastName, SUM(i.Total) AS "Total Sales Revenue"
+FROM chinook.employees e
+
+LEFT JOIN chinook.customers c
+    ON e.EmployeeID = c.SupportRepID
+LEFT JOIN chinook.invoices i
+    ON c.CustomerID = i.CustomerID
+
+WHERE e.Title = "Sales Support Agent"
+GROUP BY c.SupportRepID
+ORDER BY SUM(i.Total) asc;
+
+
+--Who is that employee's supervisor?--
+
+SELECT FirstName, LastName, ReportsTo
+FROM employees 
+WHERE FirstName = "Steve";
+
+
+SELECT FirstName, LastName, Title
+FROM employees
+WHERE EmployeeID = 2;
